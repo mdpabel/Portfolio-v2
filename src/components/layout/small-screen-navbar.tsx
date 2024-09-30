@@ -2,22 +2,22 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuSeparator,
+  Dropdownmenueparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { MenuItem } from '@/lib/wordpress/menu';
 import Link from 'next/link';
-import ThemeSwitcher from '../common/theme-switcher';
 import { FaBars } from 'react-icons/fa';
+import ThemeSwitcher from '../common/theme-switcher';
 import Logo from './logo';
+import { Menu } from './header';
 
-const SmallScreenNavbar = ({ menus }: { menus: MenuItem[] | null }) => {
+const SmallScreenNavbar = ({ menu }: { menu: Menu }) => {
   return (
     <div className='block md:hidden w-full max-w-5xl container'>
       <div className='flex justify-between'>
         <Logo />
         <div className='flex items-center space-x-5'>
-          <ThemeSwitcher />
+          <ThemeSwitcher className='shadow-lg shadow-zinc-800/9 rounded-full w-9 h-9' />
           <DropdownMenu>
             <DropdownMenuTrigger>
               <div className='flex justify-center items-center bg-white/90 dark:bg-zinc-800/90 shadow-lg shadow-zinc-800/9 backdrop-blur rounded-full w-9 h-9'>
@@ -25,16 +25,16 @@ const SmallScreenNavbar = ({ menus }: { menus: MenuItem[] | null }) => {
               </div>
             </DropdownMenuTrigger>
             <DropdownMenuContent className='mt-5 px-4 sm:px-8 lg:px-12 w-screen'>
-              {menus?.map((menu, index) => (
+              {menu?.map((menu, index) => (
                 <div key={index}>
                   <DropdownMenuItem>
                     <Link
-                      href={menu.path}
-                      className='block w-full cursor-pointer'>
+                      href={menu.to}
+                      className='block w-full font-medium text-sm text-zinc-800 hover:text-teal-500 dark:text-zinc-100 transition cursor-pointer'>
                       {menu.label}
                     </Link>
                   </DropdownMenuItem>
-                  <DropdownMenuSeparator />
+                  <Dropdownmenueparator />
                 </div>
               ))}
             </DropdownMenuContent>

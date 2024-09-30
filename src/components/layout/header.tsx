@@ -1,14 +1,37 @@
 import React from 'react';
 import BigScreenNavbar from './big-screen-navbar';
-import { fetchMenuData } from '@/lib/wordpress/menu';
 import SmallScreenNavbar from './small-screen-navbar';
 
+export const menu = [
+  // {
+  //   label: 'Home',
+  //   to: '/',
+  // },
+  {
+    label: 'About',
+    to: '/about',
+  },
+  {
+    label: 'Projects',
+    to: '/projects',
+  },
+  {
+    label: 'Notes',
+    to: '/notes',
+  },
+  {
+    label: 'Contact',
+    to: '/contact',
+  },
+];
+
+export type Menu = typeof menu;
+
 const Header = async () => {
-  const menus = await fetchMenuData();
   return (
     <header className='pt-6'>
-      <BigScreenNavbar menus={menus} />
-      <SmallScreenNavbar menus={menus} />
+      <BigScreenNavbar menu={menu} />
+      <SmallScreenNavbar menu={menu} />
     </header>
   );
 };

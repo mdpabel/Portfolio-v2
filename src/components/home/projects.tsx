@@ -1,31 +1,18 @@
-'use client';
-import Image from 'next/image';
-import Slider from 'react-slick';
+import { fetchRepositories } from '@/lib/project';
+import Projects from '../project/projects';
 
-const Projects = () => {
-  const settings = {
-    dots: false,
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 2000,
-    cssEase: 'linear',
-  };
+const RecentProjects = async () => {
+  const projects = await fetchRepositories();
 
-  return (
-    <div className=''>
-      <Slider {...settings}>
-        <Image src='/images/image-2.webp' alt='Test' width={500} height={400} />
-        <Image src='/images/image-2.webp' alt='Test' width={500} height={400} />
-        <Image src='/images/image-2.webp' alt='Test' width={500} height={400} />
-        <Image src='/images/image-2.webp' alt='Test' width={500} height={400} />
-        <Image src='/images/image-2.webp' alt='Test' width={500} height={400} />
-        <Image src='/images/image-2.webp' alt='Test' width={500} height={400} />
-      </Slider>
-    </div>
+  if (!projects || projects.length === 0) {
+    return null;
+  }
+
+  const featuredProjects = projects.filter((project) =>
+    project.topics.includes('featured-project'),
   );
+
+  return <Projects projects={featuredProjects} all={false} />;
 };
 
-export default Projects;
+export default RecentProjects;

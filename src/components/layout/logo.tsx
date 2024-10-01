@@ -5,7 +5,7 @@ const Logo = () => {
   return (
     <Link href='/'>
       <Image
-        src='/images/logo.png'
+        src='/images/logo-v2.png'
         alt='MD Pabel'
         width={50}
         height={50}

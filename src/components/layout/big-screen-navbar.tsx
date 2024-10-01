@@ -7,7 +7,7 @@ import { FaDownload } from 'react-icons/fa';
 const BigScreenNavbar = ({ menu }: { menu: Menu }) => {
   return (
     <div className='md:block hidden px-4 sm:px-8 lg:px-12 w-full max-w-5xl container'>
-      <div className='items-center grid grid-cols-3'>
+      <div className='flex justify-between items-center'>
         <Logo />
         <nav className='flex justify-center'>
           <ul className='flex bg-white/90 dark:bg-zinc-800/50 shadow-lg shadow-zinc-800/9 backdrop-blur px-3 rounded-full max-w-max font-medium dark:text-zinc-200'>

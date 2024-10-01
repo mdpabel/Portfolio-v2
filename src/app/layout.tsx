@@ -57,7 +57,7 @@ export default function RootLayout({
     <html className={theme} lang='en'>
       <body className={poppins.className}>
         <Providers>
-          <div className='grid grid-rows-[auto_1fr_auto]'>
+          <div className='grid grid-rows-[auto_1fr_auto] min-h-[100dvh]'>
             <Header />
             <main>{children}</main>
             <Footer />

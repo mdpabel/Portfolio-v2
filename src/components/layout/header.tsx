@@ -20,7 +20,7 @@ export const menu = [
     to: '/notes',
   },
   {
-    label: 'Contact',
+    label: 'Coffee with me',
     to: '/contact',
   },
 ];

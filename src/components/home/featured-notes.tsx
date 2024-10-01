@@ -49,10 +49,10 @@ const Article = ({ title, href, date, description }: ArticleProps) => {
     <article className='relative flex flex-col items-start group'>
       <h2 className='font-semibold text-base text-zinc-800 dark:text-zinc-100 tracking-tight'>
         <div className='group-hover:scale-100 z-0 absolute -inset-x-4 -inset-y-6 sm:-inset-x-6 bg-zinc-50 dark:bg-zinc-800/50 opacity-0 group-hover:opacity-100 sm:rounded-2xl transition scale-95'></div>
-        <a href={href}>
+        <Link href={'/notes/' + href}>
           <span className='z-20 absolute -inset-x-4 -inset-y-6 sm:-inset-x-6 sm:rounded-2xl'></span>
           <span className='relative z-10'>{title}</span>
-        </a>
+        </Link>
       </h2>
       <time className='relative z-10 flex items-center order-first mb-3 pl-3.5 text-sm text-zinc-400 dark:text-zinc-500'>
         <span

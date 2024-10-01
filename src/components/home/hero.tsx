@@ -14,13 +14,14 @@ const Hero = () => {
     <div className='relative px-4 sm:px-8 lg:px-12 w-full max-w-5xl container'>
       <div className='space-y-5 pt-28 max-w-2xl'>
         <h1 className='font-semibold text-4xl text-zinc-800 sm:text-5xl dark:text-zinc-100 leading-[1.1em] tracking-tight'>
-          Software developer, founder, and amateur astronaut.
+          Passionate Developer, Problem Solver, Coffee Lover
         </h1>
         <p className='text-zinc-800 dark:text-zinc-100'>
-          I’m MD Pabel, a freelance developer who has fixed over 4500 hacked
-          sites for 2000+ clients across 56% of the countries worldwide. With
-          expertise in programming, web development, and cybersecurity, I
-          deliver solutions that safeguard and optimize websites globally.
+          I’m MD Pabel, a passionate developer and tech problem solver who has
+          fixed thousands of hacked sites. Currently, I’m building 3 Zero
+          Digital, dedicated to achieving perfection with 0 Vulnerability, 0
+          Downtime, and 0 Error, helping clients overcome their digital
+          challenges—all while fueled by my love for coffee
         </p>
         <div className='flex space-x-4'>
           <Link target='_blank' href='https://github.com/mdpabel'>

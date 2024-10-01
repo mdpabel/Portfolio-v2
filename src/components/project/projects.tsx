@@ -27,17 +27,17 @@ const Projects = async ({
           <li key={index}>
             <Link href={`/projects/${project.slug}`}>
               <div className='flex justify-between gap-4 mb-6'>
-                <div className='w-3/4'>
+                <div className='w-full lg:w-3/4'>
                   <h4 className='font-semibold text-zinc-800 dark:text-zinc-100'>
                     {project.name}
                   </h4>
-                  <p className='text-zinc-500 dark:text-zinc-400'>
+                  <p className='line-clamp-2 text-zinc-500 dark:text-zinc-400'>
                     {project.description}
                   </p>
                 </div>
                 <time
                   dateTime='2023-12-01'
-                  className='text-right mt-1 w-1/4 font-light text-sm text-zinc-500 dark:text-zinc-400'>
+                  className='lg:block text-right hidden mt-1 w-1/4 font-light text-sm text-zinc-500 dark:text-zinc-400'>
                   {project.created_at}
                 </time>
               </div>

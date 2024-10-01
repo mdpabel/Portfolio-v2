@@ -12,7 +12,7 @@ import {
 const Hero = () => {
   return (
     <div className='relative px-4 sm:px-8 lg:px-12 w-full max-w-5xl container'>
-      <div className='space-y-5 pt-28 max-w-2xl'>
+      <div className='space-y-5 pt-12 lg:pt-28 max-w-2xl'>
         <h1 className='font-semibold text-4xl text-zinc-800 sm:text-5xl dark:text-zinc-100 leading-[1.1em] tracking-tight'>
           Passionate Developer, Problem Solver, Coffee Lover
         </h1>

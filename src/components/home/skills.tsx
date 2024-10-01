@@ -52,7 +52,7 @@ const MobileSkillList = () => {
     categorizeSkills(skillsArray);
 
   return (
-    <div className='space-y-8 bg-white/90 dark:bg-zinc-800/90 shadow-zinc-800/9 backdrop-blur p-6 rounded-lg'>
+    <div className='space-y-8 bg-white/90 dark:bg-zinc-800/90 shadow-zinc-800/9 backdrop-blur rounded-lg'>
       {prettyGood.length > 0 && (
         <div>
           <h3 className='mb-4 font-semibold text-teal-500 text-xl'>

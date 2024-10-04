@@ -19,7 +19,7 @@ const SmallScreenNavbar = ({ menu }: { menu: Menu }) => {
         <div className='flex items-center space-x-5'>
           <ThemeSwitcher className='shadow-lg shadow-zinc-800/9 rounded-full w-9 h-9' />
           <DropdownMenu>
-            <DropdownMenuTrigger>
+            <DropdownMenuTrigger aria-label='Open menu'>
               <div className='flex justify-center items-center bg-white/90 dark:bg-zinc-800/90 shadow-lg shadow-zinc-800/9 backdrop-blur rounded-full w-9 h-9'>
                 <FaBars className='w-5 h-5' />
               </div>

@@ -1,7 +1,3 @@
-'use client';
-
-import React from 'react';
-
 export const skillsArray = [
   { label: 'Java', level: 4.2 },
   { label: 'Javascript', level: 4.9 },
@@ -53,9 +49,10 @@ const MobileSkillList = () => {
 
   return (
     <div className='space-y-8 shadow-zinc-800/9 backdrop-blur rounded-lg'>
+      <h2 className='sr-only'>Skills Overview</h2>
       {prettyGood.length > 0 && (
         <div>
-          <h3 className='mb-4 font-semibold text-teal-500 text-xl'>
+          <h3 className='mb-4 font-medium text-teal-700 text-xl'>
             I&apos;m pretty good at:
           </h3>
           <ul className='ml-6 text-gray-700 dark:text-zinc-300 list-disc'>
@@ -68,9 +65,9 @@ const MobileSkillList = () => {
 
       {improving.length > 0 && (
         <div>
-          <h3 className='mb-4 font-semibold text-xl text-yellow-500'>
+          <h2 className='mb-4 font-medium text-xl text-yellow-700'>
             I&apos;m trying to improve:
-          </h3>
+          </h2>
           <ul className='ml-6 text-gray-700 dark:text-zinc-300 list-disc'>
             {improving.map((skill) => (
               <li key={skill}>{skill}</li>
@@ -81,9 +78,9 @@ const MobileSkillList = () => {
 
       {practice.length > 0 && (
         <div>
-          <h3 className='mb-4 font-semibold text-orange-500 text-xl'>
+          <h2 className='mb-4 font-semibold text-orange-500 text-xl'>
             I need more practice:
-          </h3>
+          </h2>
           <ul className='ml-6 text-gray-700 dark:text-zinc-300 list-disc'>
             {practice.map((skill) => (
               <li key={skill}>{skill}</li>
@@ -149,6 +146,7 @@ const Skill = ({
 const Skills = () => {
   return (
     <div className='relative flex flex-col justify-center items-center mx-auto mt-10 md:mt-15 px-8 sm:px-8 lg:px-12 pt-5 w-full max-w-5xl container'>
+      <h2 className='sr-only'>Skills Overview</h2>
       {/* Mobile layout */}
       <div className='block lg:hidden w-full'>
         <MobileSkillList />

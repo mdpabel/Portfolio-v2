@@ -1,7 +1,5 @@
 import Link from 'next/link';
 import { getNotes } from '@/lib/note';
-import Notes from '../note/Notes';
-import WorkExperiences from './work-experiences';
 
 const FeaturedNotes = async () => {
   const notes = await getNotes();
@@ -17,7 +15,7 @@ const FeaturedNotes = async () => {
           Recent Notes
         </h2>
         <Link
-          className='text-teal-500 hover:text-teal-600 dark:hover:text-teal-300 dark:text-teal-400 underline underline-offset-4 transition decoration-teal-500'
+          className='text-teal-700 hover:text-teal-800 dark:hover:text-teal-300 dark:text-teal-400 underline underline-offset-4 transition decoration-teal-500'
           href='/notes'>
           All Notes
         </Link>

@@ -19,7 +19,7 @@ const Footer = () => {
                   </Link>
                 ))}
               </div>
-              <p className='text-sm text-zinc-400 dark:text-zinc-500'>
+              <p className='text-sm text-zinc-700 dark:text-zinc-500'>
                 No © copyright issues.
               </p>
             </div>

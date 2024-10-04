@@ -30,7 +30,8 @@ const ThemeSwitcher = ({ className = '' }: { className?: string }) => {
             onClick={() => setTheme('light')}
             name='theme'
             value='light'
-            type='submit'>
+            type='submit'
+            aria-label='Switch to dark theme'>
             <SunIcon className='hover:text-teal-500 transition' />
           </button>
         ) : (
@@ -38,7 +39,8 @@ const ThemeSwitcher = ({ className = '' }: { className?: string }) => {
             onClick={() => setTheme('dark')}
             name='theme'
             value='dark'
-            type='submit'>
+            type='submit'
+            aria-label='Switch to dark theme'>
             <MoonStarIcon className='hover:text-teal-500 transition' />
           </button>
         )}

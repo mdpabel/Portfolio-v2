@@ -16,7 +16,7 @@ const Projects = async ({
         </h2>
         {!all && (
           <Link
-            className='text-teal-500 hover:text-teal-600 dark:hover:text-teal-300 dark:text-teal-400 underline underline-offset-4 transition decoration-teal-500'
+            className='text-teal-700 hover:text-teal-800 dark:hover:text-teal-300 dark:text-teal-400 underline underline-offset-4 transition decoration-teal-500'
             href='/projects'>
             All Projects
           </Link>
@@ -28,9 +28,9 @@ const Projects = async ({
             <Link href={`/projects/${project.slug}`}>
               <div className='flex justify-between gap-4 mb-6'>
                 <div className='w-full lg:w-3/4'>
-                  <h4 className='font-semibold text-zinc-800 dark:text-zinc-100'>
+                  <h3 className='font-semibold text-zinc-800 dark:text-zinc-100'>
                     {project.name}
-                  </h4>
+                  </h3>
                   <p className='line-clamp-2 text-zinc-500 dark:text-zinc-400'>
                     {project.description}
                   </p>

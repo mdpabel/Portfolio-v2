@@ -28,7 +28,7 @@ const WorkExperiences = () => {
             <span className='text-xs text-zinc-500 dark:text-zinc-400'>
               Founder
             </span>
-            <span className='ml-auto text-xs text-zinc-400 dark:text-zinc-500'>
+            <span className='ml-auto text-xs text-zinc-600 dark:text-zinc-400'>
               JUL 2024 — Present
             </span>
           </div>
@@ -43,7 +43,7 @@ const WorkExperiences = () => {
             <span className='text-xs text-zinc-500 dark:text-zinc-400'>
               Fullstack Developer | Malware Removal Expert
             </span>
-            <span className='ml-auto text-xs text-zinc-400 dark:text-zinc-500'>
+            <span className='ml-auto text-xs text-zinc-600 dark:text-zinc-400'>
               Dec 2023 — Present
             </span>
           </div>
@@ -58,7 +58,7 @@ const WorkExperiences = () => {
             <span className='text-xs text-zinc-500 dark:text-zinc-400'>
               Web Security Expert and Fullstack Developer
             </span>
-            <span className='ml-auto text-xs text-zinc-400 dark:text-zinc-500'>
+            <span className='ml-auto text-xs text-zinc-600 dark:text-zinc-400'>
               Jul 2018 — Present
             </span>
           </div>

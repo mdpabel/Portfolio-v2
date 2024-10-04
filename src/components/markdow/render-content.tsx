@@ -83,7 +83,7 @@ const Content = ({ content }: { content: string }) => {
   return (
     <div
       className={cn(
-        'relative gap-6 grid grid-cols-[75%_25%]',
+        'relative gap-6 grid grid-cols-[75%_25%] notes-wrapper',
         !tocHtml && 'grid-cols-1 ',
       )}>
       <article className='max-w-full dark:prose-invert prose'>

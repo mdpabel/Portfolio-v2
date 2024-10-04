@@ -4,8 +4,8 @@ import { menu } from './header';
 
 const Footer = () => {
   return (
-    <footer className='flex-none mt-14'>
-      <div className='relative px-4 sm:px-8 lg:px-12 w-full max-w-5xl container'>
+    <footer className='flex-none mt-10'>
+      <div className='relative px-8 lg:px-12 w-full max-w-5xl container'>
         <div className='border-zinc-100 dark:border-zinc-700/40 pt-10 pb-16 border-t'>
           <div className='mx-auto max-w-2xl lg:max-w-5xl'>
             <div className='flex sm:flex-row flex-col justify-between items-center gap-6'>

@@ -6,7 +6,7 @@ import { FaDownload } from 'react-icons/fa';
 
 const BigScreenNavbar = ({ menu }: { menu: Menu }) => {
   return (
-    <div className='md:block hidden px-4 sm:px-8 lg:px-12 w-full max-w-5xl container'>
+    <div className='md:block hidden px-8 lg:px-12 w-full max-w-5xl container'>
       <div className='flex justify-between items-center'>
         <Logo />
         <nav className='flex justify-center'>

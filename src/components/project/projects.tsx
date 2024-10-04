@@ -9,7 +9,7 @@ const Projects = async ({
   all?: boolean;
 }) => {
   return (
-    <div className='relative px-4 sm:px-8 lg:px-12 pt-24 pb-20 w-full max-w-5xl container'>
+    <div className='relative px-8 lg:px-12 pt-12 lg:pt-24 pb-20 w-full max-w-5xl container'>
       <div className='flex justify-between items-center mb-8'>
         <h2 className='font-semibold text-2xl text-zinc-800 dark:text-zinc-100'>
           My Projects

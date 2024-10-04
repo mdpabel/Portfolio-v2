@@ -13,7 +13,7 @@ import { Menu } from './header';
 
 const SmallScreenNavbar = ({ menu }: { menu: Menu }) => {
   return (
-    <div className='block md:hidden w-full max-w-5xl container'>
+    <div className='block md:hidden w-full container'>
       <div className='flex justify-between'>
         <Logo />
         <div className='flex items-center space-x-5'>
@@ -24,16 +24,14 @@ const SmallScreenNavbar = ({ menu }: { menu: Menu }) => {
                 <FaBars className='w-5 h-5' />
               </div>
             </DropdownMenuTrigger>
-            <DropdownMenuContent className='mt-5 px-4 sm:px-8 lg:px-12 w-screen'>
+            <DropdownMenuContent className='mt-5 px-8 lg:px-12 w-screen'>
               {menu?.map((menu, index) => (
                 <div key={index}>
-                  <DropdownMenuItem>
-                    <Link
-                      href={menu.to}
-                      className='block w-full font-medium text-sm text-zinc-800 hover:text-teal-500 dark:text-zinc-100 transition cursor-pointer'>
-                      {menu.label}
-                    </Link>
-                  </DropdownMenuItem>
+                  <Link
+                    href={menu.to}
+                    className='block w-full font-medium text-sm text-zinc-800 hover:text-teal-500 dark:text-zinc-100 transition cursor-pointer'>
+                    <DropdownMenuItem>{menu.label}</DropdownMenuItem>
+                  </Link>
                   <Dropdownmenueparator />
                 </div>
               ))}

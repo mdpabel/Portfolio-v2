@@ -9,7 +9,7 @@ const Logo = () => {
         alt='MD Pabel'
         width={50}
         height={50}
-        className='rounded-full'
+        className='shadow-lg shadow-zinc-800/9 rounded-full'
       />
     </Link>
   );

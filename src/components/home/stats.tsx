@@ -19,7 +19,7 @@ const Stats = () => {
             Stats
           </span>
         </h2>
-        <span className='text-sm text-teal-500 dark:text-teal-400'>
+        <span className='text-sm text-teal-600 dark:text-teal-400'>
           Last updated: 2023-09-30
         </span>
       </div>
@@ -27,11 +27,11 @@ const Stats = () => {
         {stats.map((stat, index) => (
           <li
             key={index}
-            className='flex justify-between items-center bg-zinc-50 dark:bg-zinc-800/50 px-4 py-1 rounded-lg'>
+            className='flex justify-between items-center bg-zinc-50 dark:bg-zinc-800/50 py-1 rounded-lg'>
             <span className='font-medium text-sm text-zinc-700 dark:text-zinc-300'>
               {stat.label}
             </span>
-            <span className='font-semibold text-base text-teal-600 dark:text-teal-400'>
+            <span className='font-medium text-base text-teal-600 dark:text-teal-400'>
               {stat.value}
             </span>
           </li>

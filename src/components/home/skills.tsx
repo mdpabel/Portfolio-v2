@@ -52,7 +52,7 @@ const MobileSkillList = () => {
     categorizeSkills(skillsArray);
 
   return (
-    <div className='space-y-8 bg-white/90 dark:bg-zinc-800/90 shadow-zinc-800/9 backdrop-blur rounded-lg'>
+    <div className='space-y-8 shadow-zinc-800/9 backdrop-blur rounded-lg'>
       {prettyGood.length > 0 && (
         <div>
           <h3 className='mb-4 font-semibold text-teal-500 text-xl'>
@@ -148,7 +148,7 @@ const Skill = ({
 // Main Skills Component
 const Skills = () => {
   return (
-    <div className='relative flex flex-col justify-center items-center mx-auto mt-10 md:mt-15 px-4 sm:px-8 lg:px-12 pt-5 w-full max-w-5xl container'>
+    <div className='relative flex flex-col justify-center items-center mx-auto mt-10 md:mt-15 px-8 sm:px-8 lg:px-12 pt-5 w-full max-w-5xl container'>
       {/* Mobile layout */}
       <div className='block lg:hidden w-full'>
         <MobileSkillList />

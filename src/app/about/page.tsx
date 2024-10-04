@@ -21,8 +21,8 @@ const About = () => {
   const experience = calculateYearsSince(new Date(2018, 0, 7));
 
   return (
-    <div className='relative px-4 sm:px-8 lg:px-12 w-full max-w-5xl container'>
-      <div className='grid grid-cols-1 lg:grid-cols-2 pt-28'>
+    <div className='relative px-8 lg:px-12 w-full max-w-5xl container'>
+      <div className='grid grid-cols-1 lg:grid-cols-2 pt-12 lg:pt-28'>
         <div className='lg:ml-20'>
           <Image
             className='rounded-2xl aspect-square lg:rotate-3'

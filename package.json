@@ -1,5 +1,5 @@
 {
-  "name": "themeforest",
+  "name": "Portofoliov2",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -24,6 +24,7 @@
     "next": "14.2.6",
     "next-theme": "^0.1.5",
     "next-themes": "^0.3.0",
+    "Portofoliov2": "file:",
     "react": "^18",
     "react-circular-progressbar": "^2.1.0",
     "react-dom": "^18",

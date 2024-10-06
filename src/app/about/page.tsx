@@ -33,7 +33,7 @@ const About = () => {
           />
         </div>
         <div className='space-y-10 lg:order-first lg:row-span-2 py-10 lg:py-0'>
-          <h1 className='font-bold text-4xl text-zinc-800 sm:text-5xl dark:text-zinc-100 tracking-tight'>
+          <h1 className='font-semibold text-4xl text-zinc-800 sm:text-5xl dark:text-zinc-100 leading-[1.1em] tracking-tight'>
             I’m MD Pabel. I live in Bangladesh, where I solve problems with code
             and secure websites.
           </h1>

@@ -14,6 +14,7 @@ const BigScreenNavbar = ({ menu }: { menu: Menu }) => {
             {menu?.map((menu, index) => (
               <li key={index} className='px-3 py-2'>
                 <Link
+                  prefetch={true}
                   href={menu.to}
                   className='font-medium text-sm text-zinc-800 hover:text-teal-500 dark:text-zinc-100 transition'>
                   {menu.label}

@@ -1,14 +1,16 @@
 'use client';
 import { useSearchParams } from 'next/navigation';
-import NameForm from './name-form';
 import { useEffect, useState } from 'react';
 import { ArrowLeft } from 'lucide-react';
-import ServicesForm from './services-form';
-import ProjectDetailsForm from './project-details-form';
-import ContactForm from './contact-form';
+import dynamic from 'next/dynamic';
+import NameForm from './name-form';
 
-export const dynamic = 'force-static';
-// Map service options to keys
+const ServicesForm = dynamic(() => import('./services-form'), { ssr: false });
+const ProjectDetailsForm = dynamic(() => import('./project-details-form'), {
+  ssr: false,
+});
+const ContactForm = dynamic(() => import('./contact-form'), { ssr: false });
+
 export const serviceKeyMap: Record<string, string> = {
   'Fix hacked site, Malware Removal': 'hack',
   'Web development (React, Next, Node, WordPress)': 'dev',
@@ -35,7 +37,7 @@ const Contact = () => {
           </h1>
           <p className='text-zinc-800 dark:text-zinc-100'>
             I am always excited to work on some awesome projects, message me and
-            let&apos;s discuss over coffee.
+            let's discuss over coffee.
           </p>
         </div>
 
@@ -47,10 +49,11 @@ const Contact = () => {
           </button>
         )}
 
-        {step == 1 && <NameForm setStep={setStep} />}
-        {step == 2 && <ServicesForm setStep={setStep} />}
-        {step == 3 && <ProjectDetailsForm setStep={setStep} />}
-        {step == 4 && <ContactForm setStep={setStep} />}
+        {/* Dynamically render each form based on the step */}
+        {step === 1 && <NameForm setStep={setStep} />}
+        {step === 2 && <ServicesForm setStep={setStep} />}
+        {step === 3 && <ProjectDetailsForm setStep={setStep} />}
+        {step === 4 && <ContactForm setStep={setStep} />}
       </div>
     </div>
   );

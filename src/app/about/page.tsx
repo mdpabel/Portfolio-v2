@@ -30,6 +30,7 @@ const About = () => {
             width={600}
             height={1000}
             alt='Me'
+            loading='eager'
           />
         </div>
         <div className='space-y-10 lg:order-first lg:row-span-2 py-10 lg:py-0'>

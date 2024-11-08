@@ -1,4 +1,3 @@
-import lazy from 'next/dynamic';
 import React, { Suspense } from 'react';
 import type { Metadata, ResolvingMetadata } from 'next';
 import { notFound } from 'next/navigation';

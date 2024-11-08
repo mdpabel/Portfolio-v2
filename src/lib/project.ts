@@ -70,7 +70,6 @@ export const fetchAllRepositories = cache(async (): Promise<GitHubRepo[]> => {
 
   return allRepos;
 });
-
 export const fetchRepositories = cache(async (): Promise<Project[]> => {
   const repos: GitHubRepo[] = await fetchAllRepositories();
 
@@ -94,5 +93,12 @@ export const fetchRepositories = cache(async (): Promise<Project[]> => {
     }),
   );
 
-  return projectsWithDetails;
+  // Sort the projects, prioritizing those with 'featured-project' in their topics
+  const sortedProjects = projectsWithDetails.sort((a, b) => {
+    const isAFeatured = a.topics.includes('featured-project');
+    const isBFeatured = b.topics.includes('featured-project');
+    return isBFeatured ? 1 : isAFeatured ? -1 : 0;
+  });
+
+  return sortedProjects;
 });

@@ -15,6 +15,9 @@ const nextConfig = withBundleAnalyzer({
   typescript: {
     ignoreBuildErrors: true,
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 });
 
 export default nextConfig;

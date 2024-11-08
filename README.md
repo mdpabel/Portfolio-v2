@@ -1,93 +1,68 @@
-Creating a Next.js WordPress template for ThemeForest as your first template is an exciting project! To stand out in a competitive marketplace like ThemeForest, you’ll want a unique, modern design that highlights both performance and flexibility. Here’s an idea for your first template:
-Template Name: "NeoPress"
-Overview:
+# Portfolio v2
 
-NeoPress is a sleek, modern, and performance-focused WordPress theme built with Next.js. It is designed for bloggers, content creators, and businesses looking for a clean and efficient design. The theme emphasizes speed, SEO optimization, and flexibility, with a variety of layouts and customization options.
-Key Features:
+Welcome to my personal portfolio, built using Next.js with the latest technologies for a fast, dynamic, and interactive user experience.
 
-    Performance-Optimized with Next.js:
-        Utilizes server-side rendering (SSR) and static site generation (SSG) to ensure fast load times and optimal performance.
-        Lazy loading for images and videos to enhance user experience and performance.
+## Features
 
-    Block-Based Design:
-        Fully compatible with WordPress's block editor (Gutenberg), providing users with full control over their layouts.
-        Pre-designed blocks and patterns for easy page building, including hero sections, call-to-action (CTA) buttons, feature grids, testimonials, and more.
+- **Next.js 14**: Modern full-stack React framework for static and dynamic web pages.
+- **Tailwind CSS**: A utility-first CSS framework for custom, responsive design.
+- **Radix UI**: Accessible and unstyled components for building high-quality user interfaces.
+- **React Hook Form**: A performant form management library.
+- **React Icons**: A collection of customizable icons to enhance the UI.
+- **Redis**: Used for caching view counts for the notes section (optimizes performance for tracking the number of views).
+- **GitHub CMS**: Content for notes and projects is managed directly from GitHub repositories using Markdown files for easy management and version control.
+- **GitHub Webhooks**: Automatically rebuild static pages when new content or projects are added, ensuring the site is always up to date.
 
-    Multiple Homepage Variations:
-        Includes several pre-built homepage designs catering to different niches, such as personal blogs, portfolios, agencies, and online magazines.
-        Each variation is fully customizable using the theme's customizer or the block editor.
+## Tech Stack
 
-    Dark and Light Modes:
-        Built-in light and dark mode toggle, giving users control over the appearance.
-        Custom color schemes with easy-to-use color pickers.
+- **Next.js 14**
+- **Tailwind CSS**
+- **Redis**
+- **TypeScript**
+- **React**
+- **Markdown (GitHub as CMS)**
+- **React Syntax Highlighter** for code display.
+- **React Slick** for carousel/slider components.
+- **GitHub Webhooks** for automatic content refresh.
 
-    Integrated Blog Layouts:
-        Multiple blog layouts such as grid, list, masonry, and full-width, all optimized for readability and engagement.
-        Category and tag-specific templates to enhance SEO and user experience.
+## Content Management & Projects
 
-    Dynamic Widgets and Sidebars:
-        Custom widgets for recent posts, popular posts, social media feeds, and newsletter signups.
-        Sticky sidebar options for better user interaction and navigation.
+### GitHub Repositories
 
-    WooCommerce Support:
-        Full integration with WooCommerce for building e-commerce sites.
-        Custom product page layouts and shop styles to enhance the shopping experience.
+- **Notes Repository**: The content for the "Notes" section is stored in the [Notes Repository](https://github.com/mdpabel/notes). Notes are written in Markdown and stored in GitHub, allowing for easy content management and versioning.
 
-    SEO and Schema Markup:
-        Built-in SEO tools to optimize content for search engines.
-        Supports schema markup to improve visibility in search results.
+- **Project Repositories**: My portfolio dynamically fetches project data from various GitHub repositories. Some repositories are marked as **projects** using the `types` field in the repository metadata. Projects are then showcased on the site, with each project's details coming directly from the respective repository's `README.md`.
 
-    Responsive Design:
-        Fully responsive and mobile-friendly layouts.
-        Optimized for different screen sizes, ensuring a seamless experience across devices.
+### GitHub Webhooks
 
-    Advanced Theme Options:
-        A powerful theme options panel built with React, allowing users to easily configure and customize various elements of their site without touching code.
-        Features like typography settings, color pickers, layout control, and more.
+To ensure that the site is always up to date, GitHub webhooks are used to trigger a rebuild of the static pages whenever new content or projects are added. This ensures that any updates to my repositories automatically reflect on the portfolio without requiring manual intervention.
 
-    Custom Header and Footer Builder:
-        Drag-and-drop builder for creating custom headers and footers.
-        Pre-built header and footer layouts to choose from.
+## Performance
 
-    Built-In Animations:
-        Subtle animations for elements like text, images, and buttons to improve user interaction.
-        Smooth scrolling and parallax effects.
+- The site is optimized for performance with a **Lighthouse score of 100** for both desktop and mobile.
 
-    Documentation and Support:
-        Detailed documentation for installation, setup, and customization.
-        Customer support through a ticketing system for purchasers.
+![Performance score](./public/screenshots/Screenshot_10.png title')
 
-    One-Click Demo Import:
-        Easy demo import feature to help users replicate the demo site with just one click.
-        Multiple demo variations available, targeting different niches and styles.
+## How It Works
 
-    Advanced Typography Settings:
-        Google Fonts integration with advanced typography options.
-        Custom font settings for different sections like headers, body, and buttons.
+1. **Notes Fetching**: Notes are fetched from the [Notes Repository](https://github.com/mdpabel/notes) using the GitHub API, and the content is rendered on the site. Notes are dynamically updated via GitHub Webhooks whenever new content is added.
+2. **Projects Display**: Projects are fetched from my GitHub repositories marked as projects. These repositories contain `README.md` files, which are used to populate the details for each project displayed on the site.
+3. **View Counting**: Redis is used to increment view counts for notes, ensuring that each view is tracked efficiently. The use of Redis enhances the performance of tracking without affecting the overall user experience.
 
-Demo Ideas:
+## Libraries and Dependencies
 
-    NeoPress Classic - A modern, clean blog layout with a focus on content and imagery.
-    NeoPress Business - A corporate website template with a professional and sleek design.
-    NeoPress Store - A WooCommerce-powered online store demo.
-    NeoPress Portfolio - A creative portfolio layout for designers, photographers, and freelancers.
-    NeoPress Magazine - A stylish magazine layout with multiple sections for different content categories.
+### Main Dependencies:
 
-Design Style:
+- `next`, `react`, `react-dom`: Core libraries for building and rendering the React application.
+- `@radix-ui/react-*`: A set of components for building accessible and high-quality UI elements.
+- `tailwindcss`: CSS framework for building responsive and modern interfaces.
+- `react-hook-form`: For managing form data efficiently.
+- `react-slick`: Carousel/slider for project showcase.
+- `zod`: For type-safe data validation.
+- `next-webhooks`: For handling webhooks from GitHub to trigger static page revalidation.
 
-    Minimalist and Clean: A focus on whitespace and clean typography to create an elegant, uncluttered appearance.
-    High-Impact Visuals: Bold hero images, creative use of grid layouts, and sharp contrasts between sections.
-    Microinteractions: Subtle animations that provide feedback to users, making the site feel dynamic and interactive.
+### Development Dependencies:
 
-Technology Stack:
-
-    Next.js: For server-side rendering, static site generation, and optimal performance.
-    React: For a responsive and interactive frontend experience.
-    WordPress REST API: For content management and dynamic content loading.
-    WooCommerce Integration: For e-commerce functionality.
-
-Target Audience:
-
-    Bloggers, entrepreneurs, content creators, agencies, and small businesses looking for a fast and customizable WordPress theme with a modern edge.
-
-This theme concept not only leverages the performance advantages of Next.js but also caters to a wide audience. With a strong focus on performance, SEO, and customizability, you should be able to attract a variety of users looking for a flexible and powerful WordPress theme.
+- `eslint`, `typescript`, `postcss`: To ensure code quality and proper type checking.
+- `@tailwindcss/typography`: For better text and markdown rendering.
+- `@next/bundle-analyzer`: For performance analysis.

@@ -1,5 +1,6 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, ReactNode } from 'react';
+import dynamic from 'next/dynamic';
 import { remark } from 'remark';
 import html from 'remark-html';
 import toc from 'remark-toc';
@@ -9,15 +10,23 @@ import rehypeStringify from 'rehype-stringify';
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 import remarkGfm from 'remark-gfm';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { a11yDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
-import { ReactNode } from 'react';
 import rehypeSlug from 'rehype-slug';
 import remarkAutolinkHeadings from 'remark-autolink-headings';
 import CodeCopyBtn from './CodeCopyBtn';
 import TableOfContents from './TableOfContents';
 import { cn } from '@/lib/utils';
 import { visit } from 'unist-util-visit';
+
+// Dynamic import of SyntaxHighlighter with a fallback loader
+const SyntaxHighlighter = dynamic(
+  () => import('react-syntax-highlighter').then((mod) => mod.Prism),
+  {
+    ssr: false, // Prevents server-side rendering for this component
+    loading: () => <div>Loading code...</div>, // Loading fallback
+  },
+);
+
+import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
 // Custom plugin to modify <img> src attributes
 const rehypeImageSrc = (repoUrl: string) => {
@@ -107,7 +116,7 @@ const Content = ({ content }: { content: string }) => {
               return match ? (
                 <SyntaxHighlighter
                   // @ts-ignore
-                  style={a11yDark}
+                  style={vscDarkPlus}
                   language={match[1]}
                   PreTag='div'
                   {...props}>

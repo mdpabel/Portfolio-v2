@@ -131,6 +131,7 @@ const About = () => {
           </ul>
           <div className='flex justify-center pt-4'>
             <img
+              loading='lazy'
               width={500}
               height={300}
               alt='Leetcode MD Pabel'

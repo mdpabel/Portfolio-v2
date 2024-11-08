@@ -55,8 +55,6 @@ const page = async ({ params }: PropTypes) => {
 
   if (!note) return notFound();
 
-  incrementNoteView(note.file.data.title);
-
   const githubUrl = note.githubUrl ?? '';
 
   return (

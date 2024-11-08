@@ -5,11 +5,18 @@ import { ArrowLeft } from 'lucide-react';
 import dynamic from 'next/dynamic';
 import NameForm from './name-form';
 
-const ServicesForm = dynamic(() => import('./services-form'), { ssr: false });
+const ServicesForm = dynamic(() => import('./services-form'), {
+  ssr: false,
+  loading: () => <p>Loading...</p>,
+});
 const ProjectDetailsForm = dynamic(() => import('./project-details-form'), {
   ssr: false,
+  loading: () => <p>Loading...</p>,
 });
-const ContactForm = dynamic(() => import('./contact-form'), { ssr: false });
+const ContactForm = dynamic(() => import('./contact-form'), {
+  ssr: false,
+  loading: () => <p>Loading...</p>,
+});
 
 export const serviceKeyMap: Record<string, string> = {
   'Fix hacked site, Malware Removal': 'hack',

@@ -1,11 +1,11 @@
-import Image from 'next/image';
-import videIcon from '@/../public/images/videoIcon.png';
-import { unstable_noStore as noStore } from 'next/cache';
-import { getNoteView } from '@/lib/note';
-import { VideoIcon, ViewIcon, YoutubeIcon } from 'lucide-react';
+import { getNoteView, incrementNoteView } from '@/lib/note';
+import { YoutubeIcon } from 'lucide-react';
+import { unstable_noStore } from 'next/cache';
 
 const View = async ({ title }: { title: string }) => {
-  noStore();
+  unstable_noStore();
+
+  await incrementNoteView(title);
   const totalViews = await getNoteView(title);
 
   return (

@@ -1,7 +1,7 @@
 import View from '@/components/note/View';
 import { NotesType } from '@/lib/note';
 import Link from 'next/link';
-import React, { Suspense } from 'react';
+import { Suspense } from 'react';
 
 const Notes = ({ notes }: { notes: NotesType }) => {
   return (
